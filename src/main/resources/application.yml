@@ -1,0 +1,27 @@
+micronaut:
+  application:
+    name: kalaha
+datasources:
+  default:
+    driver-class-name: org.postgresql.Driver
+    db-type: postgres
+    username: postgres179
+    password: MZth2BRdEpAI
+    url: jdbc:postgresql://${DB_HOST:localhost}:5432/postgres
+r2dbc:
+  datasources:
+    default:
+      dialect: POSTGRES
+      db-type: postgres
+      host: ${DB_HOST:localhost}
+      port: 5432
+      username: postgres179
+      password: MZth2BRdEpAI
+      database: postgres
+      driver: postgresql
+flyway:
+  datasources:
+    default:
+      enabled: true
+redis:
+  uri: redis://${REDIS_HOST:localhost}:6379
